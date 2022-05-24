@@ -35,4 +35,9 @@ function themeConfig($form)
     $form->addInput($introduce);
     $form->addInput($cur);
 }
+function themeFields($layout)
+{
+    $tzurl = new Typecho_Widget_Helper_Form_Element_Textarea('tzurl', NULL, NULL, _t('要跳转的网址'), _t('在这里填入要跳转的网址，在菜单点击后将会跳转'));
+    $layout->addItem($tzurl);
+}
 ?>
